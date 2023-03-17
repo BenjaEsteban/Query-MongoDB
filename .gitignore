@@ -74,3 +74,4 @@ $RECYCLE.BIN/
 
 mongo_data/
 mongodb_data/
+docker-compose.yml
