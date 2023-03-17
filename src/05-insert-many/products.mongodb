@@ -1,0 +1,22 @@
+use("store")
+
+db.products.drop()        // Borramos todos los documentos que posea la colección 
+
+db.products.insertMany([  // Insertar varios documentos en una colección 
+    {
+        name: "Product 1",
+        price: 100
+    },
+    {
+        name: "Product 2",
+        price: 200
+    },
+    {
+        name: "Product 3",
+        price: 300
+    }
+], {
+    ordered: false    // --> Con esta condición restringimos que si un documento                      
+})                    //sufre un error los demás puedan insertarse de todos modos.
+
+db.products.find()
