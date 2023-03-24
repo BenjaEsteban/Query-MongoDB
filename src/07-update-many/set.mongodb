@@ -1,0 +1,14 @@
+use("sample_training")
+
+db.zips.find({ city: "CLEVELAND"}).count()
+
+db.zips.updateMany(
+    {
+        city: "CLEVELAND"
+    },
+    {
+        $set: {                 // Con la función RENAME puedo modificar el nuevo atributo por otro nombre 
+            myAttr: "hola"
+        }
+    }
+)

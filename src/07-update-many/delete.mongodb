@@ -1,0 +1,14 @@
+use("sample_training")
+
+db.zips.find({ city: "CLEVELAND"}).count()
+
+db.zips.updateMany(
+    {
+        city: "CLEVELAND"
+    },
+    {
+        $unset: {                 // Con el metodo unset elimino un atributo del documento
+            myAttr: ""
+        }
+    }
+)

@@ -1,0 +1,12 @@
+use("store")
+
+db.products.updateOne(
+    // Query
+    {"_id":{$eq:ObjectId("641396757e3e9359cb57449d")}},
+    // Change => operators
+    {
+        $inc: { // Operador incrementa los atributos de un documento 
+            price: 150,       // En este caso incrementamos nuestro valor en 150, es decir, valor + 150
+        }
+    }
+)

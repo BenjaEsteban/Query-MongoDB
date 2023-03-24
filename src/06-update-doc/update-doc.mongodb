@@ -2,11 +2,12 @@ use("store")
 
 db.products.updateOne(
     // Query
-    {_id: "641396757e3e9359cb57449d"},
+    {"_id":{$eq:ObjectId("641396757e3e9359cb57449d")}},
     // Change => operators
     {
         $set: { // Operador para modificar documentos 
-            name: 'Change name'
+            name: 'hols',
+            price: 150
         }
     }
 )
